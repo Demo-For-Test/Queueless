@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Inter', var(--font-geist-sans), sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  
+  --color-saffron-50: #fff9f5;
+  --color-saffron-100: #ffede0;
+  --color-saffron-500: #fc8019;
+  --color-saffron-600: #e66b00;
+  --color-saffron-primary: #fc8019;
+  --color-saffron-secondary: #ff9f59;
+  
+  --color-slate-900: #1c1c27;
+  --color-slate-800: #2b2b3b;
+  --color-slate-gray: #686b78;
+  
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1c1c27;
+  --card: #ffffff;
+  --card-foreground: #1c1c27;
+  --border: rgba(0, 0, 0, 0.05);
+  --muted: #f8fafc;
+  --muted-foreground: #686b78;
+}
+
+[data-theme='dark'] {
+  --background: #0b0b14;
+  --foreground: #f8fafc;
+  --card: #151521;
+  --card-foreground: #f8fafc;
+  --border: rgba(255, 255, 255, 0.05);
+  --muted: #1c1c27;
+  --muted-foreground: #94a3b8;
+}
+
+
+.glass {
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+}
+
+.glass-dark {
+  background: rgba(28, 28, 39, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #fc8019, #ff9f59);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@theme inline {
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
